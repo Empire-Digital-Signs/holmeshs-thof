@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/wordpress/holmes-public-site/node_modules
+/wordpress/holmes-content-portal/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -13,12 +15,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
+/wordpress/*/build/
 
 # misc
 .DS_Store
@@ -32,16 +31,3 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# sanity
-/dist
-
-# tina cms
-tina/__generated__

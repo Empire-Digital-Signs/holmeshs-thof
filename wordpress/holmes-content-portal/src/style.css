@@ -1,0 +1,494 @@
+.hhs-admin {
+  --hhs-ink: #111;
+  --hhs-muted: #6e7071;
+  --hhs-brand: #3f96d2;
+  --hhs-accent: #27cbcb;
+  --hhs-line: rgb(110 112 113 / 28%);
+  --hhs-surface: #fff;
+  --hhs-page: #f3f6f7;
+  --hhs-soft: #edf2f4;
+  color: var(--hhs-ink);
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 0 16px 24px;
+  background: var(--hhs-page);
+  font-family: system-ui, sans-serif;
+  color-scheme: light;
+}
+
+.hhs-admin.is-dark {
+  --hhs-ink: #fff;
+  --hhs-muted: #c1c6c8;
+  --hhs-line: rgb(110 112 113 / 65%);
+  --hhs-surface: #24292c;
+  --hhs-page: #171a1c;
+  --hhs-soft: #303638;
+  color-scheme: dark;
+}
+
+.hhs-admin.is-light {
+  background: var(--hhs-page);
+}
+
+.hhs-admin *,
+.hhs-admin *::before,
+.hhs-admin *::after {
+  box-sizing: border-box;
+}
+
+.hhs-admin-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px;
+  color: #fff;
+  background: linear-gradient(120deg, var(--hhs-brand), var(--hhs-accent));
+  border-radius: 14px;
+}
+
+.hhs-admin-header h1 {
+  margin: 3px 0 8px;
+  color: inherit;
+  font-size: 30px;
+}
+
+.hhs-admin-header p {
+  margin: 0;
+  color: #d4dce4;
+}
+
+.hhs-admin-eyebrow {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.hhs-admin-account {
+  flex: 0 0 auto;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hhs-admin-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hhs-admin-theme-toggle,
+.hhs-admin-support {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.hhs-admin-theme-toggle:hover,
+.hhs-admin-support:hover {
+  background: rgb(255 255 255 / 15%);
+  color: #fff;
+}
+
+.hhs-admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--hhs-line);
+}
+
+.hhs-admin-tabs button,
+.hhs-admin-row-actions button {
+  border: 0;
+  background: transparent;
+  color: var(--hhs-muted);
+  cursor: pointer;
+  font: inherit;
+}
+
+.hhs-admin-tabs button {
+  flex: 0 0 auto;
+  padding: 12px 15px;
+  border-radius: 7px;
+  font-weight: 650;
+}
+
+.hhs-admin-tabs button.is-active {
+  color: #111;
+  background: var(--hhs-accent);
+}
+
+.hhs-admin-panel {
+  padding: 24px;
+  background: var(--hhs-surface);
+  border: 1px solid var(--hhs-line);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 8%);
+}
+
+.hhs-admin-panel-heading,
+.hhs-admin-form-heading,
+.hhs-admin-actions,
+.hhs-admin-settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hhs-admin-panel-heading h2,
+.hhs-admin-form-heading h3 {
+  margin: 0;
+}
+
+.hhs-admin-panel-heading p {
+  margin: 5px 0 0;
+  color: var(--hhs-muted);
+}
+
+.hhs-admin-primary,
+.hhs-admin-secondary {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+}
+
+.hhs-admin-primary {
+  color: #fff;
+  background: var(--hhs-brand);
+}
+
+.hhs-admin-secondary {
+  color: var(--hhs-ink);
+  background: var(--hhs-surface);
+  border-color: var(--hhs-line);
+}
+
+.hhs-admin-primary:disabled,
+.hhs-admin-secondary:disabled {
+  cursor: wait;
+  opacity: .6;
+}
+
+.hhs-admin-settings {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 22px 0;
+  padding: 16px;
+  background: var(--hhs-soft);
+  border-radius: 8px;
+}
+
+.hhs-admin-settings label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.hhs-admin-settings input {
+  width: 120px;
+}
+
+.hhs-admin-form {
+  margin-top: 24px;
+  padding: 22px;
+  background: var(--hhs-soft);
+  border: 1px solid var(--hhs-line);
+  border-radius: 10px;
+}
+
+.hhs-admin-form-heading {
+  margin-bottom: 18px;
+}
+
+.hhs-admin-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--hhs-line);
+  color: var(--hhs-ink);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hhs-admin-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hhs-admin-fields > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 650;
+}
+
+.hhs-admin-fields > div > span,
+.hhs-admin-fields > div > label {
+  display: block;
+}
+
+.hhs-admin-fields label {
+  font-weight: 650;
+}
+
+.hhs-admin-fields label.is-wide {
+  grid-column: 1 / -1;
+}
+
+.hhs-admin-fields input,
+.hhs-admin-fields textarea,
+.hhs-admin-fields select,
+.hhs-admin-settings input {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--hhs-line);
+  border-radius: 6px;
+  background: var(--hhs-surface);
+  color: var(--hhs-ink);
+  font: inherit;
+}
+
+.hhs-admin-fields textarea {
+  resize: vertical;
+}
+
+.hhs-admin-media {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 42px;
+}
+
+.hhs-admin-media img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.hhs-admin-media p {
+  margin: 0;
+  color: var(--hhs-muted);
+  font-weight: 400;
+}
+
+.hhs-admin-actions {
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.hhs-admin-table-wrap {
+  margin-top: 22px;
+  overflow-x: auto;
+}
+
+.hhs-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: var(--hhs-ink);
+}
+
+.hhs-admin-table th,
+.hhs-admin-table td {
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--hhs-line);
+  vertical-align: middle;
+}
+
+.hhs-admin-table th {
+  color: var(--hhs-muted);
+  font-size: 12px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.hhs-admin-row-actions {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  gap: 14px;
+}
+
+.hhs-admin-row-actions-cell {
+  height: 100%;
+}
+
+.hhs-admin-row-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid var(--hhs-brand);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--hhs-brand);
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.hhs-admin-row-actions button:hover {
+  background: var(--hhs-brand);
+  color: #fff;
+}
+
+.hhs-admin-yearbook-url {
+  max-width: 420px;
+  overflow-wrap: anywhere;
+}
+
+.hhs-admin-yearbook-url a {
+  color: var(--hhs-brand);
+}
+
+.hhs-admin-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--hhs-soft);
+  color: var(--hhs-muted);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.hhs-admin-status.is-publish {
+  background: rgb(39 203 203 / 24%);
+  color: var(--hhs-ink);
+}
+
+.hhs-admin-alert,
+.hhs-admin-empty,
+.hhs-admin-error {
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+.hhs-admin-alert {
+  margin: 16px 0;
+}
+
+.hhs-admin-alert.is-error,
+.hhs-admin-error {
+  color: #8d1621;
+  background: #fae7e9;
+}
+
+.hhs-admin-alert.is-success {
+  color: #176b36;
+  background: #e6f4ea;
+}
+
+.hhs-admin-confirm {
+  margin: 16px 0;
+  padding: 18px;
+  border: 1px solid var(--hhs-line);
+  border-radius: 8px;
+  background: var(--hhs-soft);
+}
+
+.hhs-admin-confirm h2,
+.hhs-admin-confirm p {
+  margin-top: 0;
+}
+
+.hhs-admin-danger {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid #8d1621;
+  border-radius: 7px;
+  background: #8d1621;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+}
+
+.hhs-admin-empty {
+  margin: 22px 0 0;
+  color: var(--hhs-muted);
+  background: var(--hhs-soft);
+  text-align: center;
+}
+
+.hhs-admin.is-dark .hhs-admin-header {
+  background: linear-gradient(120deg, #25648f, #087d7d);
+}
+
+.hhs-admin.is-dark .hhs-admin-tabs button.is-active {
+  color: #111;
+}
+
+.hhs-admin.is-dark .hhs-admin-close {
+  color: var(--hhs-ink);
+}
+
+.hhs-admin.is-dark .hhs-admin-status.is-publish {
+  color: #fff;
+}
+
+.hhs-admin.is-dark .hhs-admin-alert.is-error,
+.hhs-admin.is-dark .hhs-admin-error {
+  color: #ffd9dc;
+  background: #5b252b;
+}
+
+.hhs-admin.is-dark .hhs-admin-alert.is-success {
+  color: #d6ffff;
+  background: #155e5e;
+}
+
+.hhs-admin.is-dark .hhs-admin-danger {
+  border-color: #b6424d;
+  background: #8d1621;
+}
+
+@media (max-width: 782px) {
+  .hhs-admin {
+    margin: 12px;
+    padding: 0 0 20px;
+  }
+
+  .hhs-admin-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .hhs-admin-header-actions {
+    justify-content: flex-start;
+  }
+
+  .hhs-admin-panel {
+    padding: 16px;
+  }
+
+  .hhs-admin-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hhs-admin-fields label.is-wide {
+    grid-column: auto;
+  }
+}
